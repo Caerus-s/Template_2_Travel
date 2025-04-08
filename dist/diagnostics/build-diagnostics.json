@@ -1,0 +1,6 @@
+{
+  "buildStage": "webpack-compile-client",
+  "buildOptions": {
+    "useBuildWorker": "true"
+  }
+}
