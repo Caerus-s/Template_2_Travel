@@ -1,5 +1,5 @@
 {
-  "buildStage": "webpack-compile-client",
+  "buildStage": "static-generation",
   "buildOptions": {
     "useBuildWorker": "true"
   }
