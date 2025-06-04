@@ -37,11 +37,11 @@ const getProduct = (id: string) => {
     groupSize: "4-12",
     difficulty: "Moderate",
     images: [
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
+      "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
     ],
     description:
       "Immerse yourself in the rich culture and stunning landscapes of Bali. This 7-day adventure combines cultural experiences with outdoor activities, taking you through ancient temples, lush rice terraces, pristine beaches, and volcanic landscapes.",
@@ -228,7 +228,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             <div className="space-y-4">
               <div className="relative">
                 <Image
-                  src={product.images[0] || "/placeholder.svg"}
+                  src={product.images[0]}
                   alt={product.title}
                   width={800}
                   height={600}
