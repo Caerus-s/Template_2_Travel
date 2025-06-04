@@ -37,11 +37,11 @@ const getProduct = (id: string) => {
     groupSize: "4-12",
     difficulty: "Moderate",
     images: [
-      "bali.jpg",
-      "bow_lake_park.jpg",
-      "chiang_mai_thailand.jpg",
-      "dolomites_italy.jpg",
-      "faroe_islands.jpg",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbali&psig=AOvVaw12HS1XDw66S76KTYfg3zJ9&ust=1749117740218000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDby7_B140DFQAAAAAdAAAAABAE",
     ],
     description:
       "Immerse yourself in the rich culture and stunning landscapes of Bali. This 7-day adventure combines cultural experiences with outdoor activities, taking you through ancient temples, lush rice terraces, pristine beaches, and volcanic landscapes.",
