@@ -37,11 +37,11 @@ const getProduct = (id: string) => {
     groupSize: "4-12",
     difficulty: "Moderate",
     images: [
-      "/placeholder.svg?height=600&width=800&text=Bali+Temple",
-      "/placeholder.svg?height=600&width=800&text=Rice+Terraces",
-      "/placeholder.svg?height=600&width=800&text=Beach+Sunset",
-      "/placeholder.svg?height=600&width=800&text=Local+Market",
-      "/placeholder.svg?height=600&width=800&text=Volcano+Hike",
+      "bali.jpg",
+      "bow_lake_park.jpg",
+      "chiang_mai_thailand.jpg",
+      "dolomites_italy.jpg",
+      "faroe_islands.jpg",
     ],
     description:
       "Immerse yourself in the rich culture and stunning landscapes of Bali. This 7-day adventure combines cultural experiences with outdoor activities, taking you through ancient temples, lush rice terraces, pristine beaches, and volcanic landscapes.",
@@ -175,7 +175,7 @@ const getProduct = (id: string) => {
         date: "2 weeks ago",
         comment:
           "Absolutely incredible experience! The guide was knowledgeable and the activities were perfectly balanced between adventure and culture.",
-        avatar: "/placeholder.svg?height=40&width=40&text=SJ",
+          avatar: "tourguide.jpg"
       },
       {
         id: 2,
@@ -184,7 +184,7 @@ const getProduct = (id: string) => {
         date: "1 month ago",
         comment:
           "Best trip I've ever taken. The sunrise hike was breathtaking and the cooking class was so much fun. Highly recommend!",
-        avatar: "/placeholder.svg?height=40&width=40&text=MC",
+        avatar: "tourguide.jpg"
       },
       {
         id: 3,
@@ -193,7 +193,8 @@ const getProduct = (id: string) => {
         date: "2 months ago",
         comment:
           "Great organization and beautiful locations. The only minor issue was the weather on day 3, but that's beyond anyone's control.",
-        avatar: "/placeholder.svg?height=40&width=40&text=EW",
+          // avatar: "/placeholder.svg?height=40&width=40&text=EW",
+          avatar: "tourguide.jpg"
       },
     ],
   };
