@@ -27,104 +27,13 @@ import RealtimeTimestamp from "@/components/time"
 import CardVideoPlayer from "@/components/card-video-player"
 import ExperienceSection from "@/components/experience-tab"
 import AnimatedDetailsSection from "@/components/animate-detail-section"
+import NavBar from "@/components/navbar"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="flex items-center justify-between p-4 border-b border-skyblue-100 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
-        <div className="flex items-center gap-4">
-          <h1 className="text-xl font-bold text-skyblue-700">caerus</h1>
-          <RealtimeTimestamp />
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" size="icon" className="text-skyblue-600 hover:text-skyblue-800 hover:bg-skyblue-50">
-            <Search className="h-5 w-5" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="relative text-skyblue-600 hover:text-skyblue-800 hover:bg-skyblue-50"
-          >
-            <Bell className="h-5 w-5" />
-            <span className="absolute top-1 right-1 h-2 w-2 bg-yellow-400 rounded-full"></span>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="relative text-skyblue-600 hover:text-skyblue-800 hover:bg-skyblue-50"
-          >
-            <ShoppingBag className="h-5 w-5" />
-            <span className="absolute top-1 right-1 h-2 w-2 bg-yellow-400 rounded-full"></span>
-          </Button>
-          <Button variant="ghost" size="icon" className="text-skyblue-600 hover:text-skyblue-800 hover:bg-skyblue-50">
-            <User className="h-5 w-5" />
-          </Button>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="relative text-skyblue-600 hover:text-skyblue-800 hover:bg-skyblue-50"
-          >
-            <ShoppingBag className="h-5 w-5" />
-            <span className="absolute top-1 right-1 h-2 w-2 bg-yellow-400 rounded-full"></span>
-          </Button>
-
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-skyblue-600 hover:text-skyblue-800 hover:bg-skyblue-50"
-              >
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent className="w-[300px] sm:w-[400px]">
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-xl font-bold text-skyblue-700">caerus</h2>
-                </div>
-                <nav className="flex flex-col gap-4">
-                  <Button variant="ghost" className="justify-start text-skyblue-800">
-                    Home
-                  </Button>
-                  <Button variant="ghost" className="justify-start text-skyblue-800">
-                    Destinations
-                  </Button>
-                  <Button variant="ghost" className="justify-start text-skyblue-800">
-                    Experiences
-                  </Button>
-                  <Button variant="ghost" className="justify-start text-skyblue-800">
-                    About Us
-                  </Button>
-                  <Button variant="ghost" className="justify-start text-skyblue-800">
-                    Contact
-                  </Button>
-                </nav>
-                <div className="mt-auto pt-8 border-t border-skyblue-100">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Button variant="ghost" size="icon" className="text-skyblue-600">
-                      <Search className="h-5 w-5" />
-                    </Button>
-                    <Button variant="ghost" size="icon" className="text-skyblue-600">
-                      <Bell className="h-5 w-5" />
-                    </Button>
-                    <Button variant="ghost" size="icon" className="text-skyblue-600">
-                      <User className="h-5 w-5" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </header>
+      <NavBar/>
 
       {/* Hero Section */}
       <section>
@@ -183,10 +92,10 @@ export default function Home() {
 
               <div className="flex gap-2 mb-4 md:mb-8">
                 <Badge variant="outline" className="bg-skyblue-500 text-white border-0 text-xs">
-                  #PART1
+                  #MALLORCA
                 </Badge>
                 <Badge variant="outline" className="bg-white text-skyblue-800 border border-skyblue-200 text-xs">
-                  #PRESENT1
+                  #SPAIN
                 </Badge>
               </div>
 
@@ -241,13 +150,13 @@ export default function Home() {
                 </div>
                 <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
                   <Badge variant="outline" className="bg-skyblue-500 text-white border-0 text-xs">
-                    #PART1
+                    #KYOTO
                   </Badge>
                 </div>
               </Card>
 
               {/* Floating small card */}
-              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6">
+              <div className="absolute -bottom-4 -right-4 sm:-bottom-10 sm:-right-6">
                 <Card className="p-3 sm:p-4 max-w-[140px] sm:max-w-xs border-skyblue-200">
                   <div className="font-medium text-xs sm:text-sm text-skyblue-800">EXPLORE KYOTO</div>
                 </Card>
@@ -261,6 +170,7 @@ export default function Home() {
                 "We explored the best of Tokyo, Kyoto, and Osaka, all without the usual travel stress.
                 Truly a trip of a lifetime!"
               </p>
+              <div className="text-4xl md:text-6xl text-skyblue-200 mb-2 md:mb-4">"</div>
 
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-4 md:mt-8 gap-4 sm:gap-0">
                 <div className="text-xs sm:text-sm text-skyblue-600">
@@ -272,10 +182,10 @@ export default function Home() {
 
                 <div className="flex gap-2">
                   <Badge variant="outline" className="bg-skyblue-500 text-white border-0 text-xs">
-                    #PART1
+                    #TRAVEL
                   </Badge>
                   <Badge variant="outline" className="bg-white text-skyblue-800 border border-skyblue-200 text-xs">
-                    #PRESENT1
+                    #JAPAN
                   </Badge>
                   <Badge
                     variant="outline"
@@ -325,10 +235,10 @@ export default function Home() {
               </p>
               <div className="flex gap-2 mt-6 sm:mt-8">
                 <Badge variant="outline" className="bg-skyblue-500 text-white border-0 text-xs">
-                  #PART1
+                  #TRAVEL
                 </Badge>
                 <Badge variant="outline" className="bg-white text-skyblue-800 border border-skyblue-200 text-xs">
-                  #PRESENT1
+                  #WORLD
                 </Badge>
               </div>
             </div>
@@ -351,10 +261,10 @@ export default function Home() {
               </p>
               <div className="flex gap-2 mt-6 sm:mt-8">
                 <Badge variant="outline" className="bg-skyblue-500 text-white border-0 text-xs">
-                  #PART1
+                  #LOVE
                 </Badge>
                 <Badge variant="outline" className="bg-white text-skyblue-800 border border-skyblue-200 text-xs">
-                  #PRESENT1
+                  #BEACH
                 </Badge>
               </div>
             </div>
@@ -363,52 +273,34 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 md:py-16 px-4 sm:px-8 border-t border-skyblue-100">
+      <footer className="py-12 px-4 border-t border-skyblue-100 bg-skyblue-50">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
+              <h3 className="text-xl font-bold text-skyblue-900 mb-4">caerus</h3>
               <p className="text-sm text-skyblue-600 mb-4">
                 We offer travel itineraries that focus on rich experiences
               </p>
-              <p className="text-sm mb-6 md:mb-8 text-skyblue-800">contact@caerus@gmail.com</p>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-skyblue-300 text-skyblue-500 hover:bg-skyblue-50"
-              >
-                <Play className="h-5 w-5" />
-              </Button>
+              <p className="text-sm mb-6 text-skyblue-800">ccaeruss@gmail.com</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:gap-8">
+            <div className="grid grid-cols-2 gap-4">
               <div>
-                <div className="text-sm font-medium mb-2 text-skyblue-800">Home</div>
-                <div className="text-sm font-medium mb-2 text-skyblue-800">Explore</div>
+                <div className="text-sm font-medium mb-2 text-skyblue-800">Company</div>
                 <div className="text-sm font-medium mb-2 text-skyblue-800">About</div>
                 <div className="text-sm font-medium mb-2 text-skyblue-800">Contact</div>
+                <div className="text-sm font-medium mb-2 text-skyblue-800">Careers</div>
               </div>
               <div>
-                <div className="text-sm font-medium mb-2 text-skyblue-800">Home</div>
-                <div className="text-sm font-medium mb-2 text-skyblue-800">Explore</div>
-                <div className="text-sm font-medium mb-2 text-skyblue-800">About</div>
-                <div className="text-sm font-medium mb-2 text-skyblue-800">Contact</div>
+                <div className="text-sm font-medium mb-2 text-skyblue-800">Support</div>
+                <div className="text-sm font-medium mb-2 text-skyblue-800">Help Center</div>
+                <div className="text-sm font-medium mb-2 text-skyblue-800">Terms</div>
+                <div className="text-sm font-medium mb-2 text-skyblue-800">Privacy</div>
               </div>
             </div>
           </div>
 
-          <div className="flex justify-end">
-            <Button
-              variant="outline"
-              size="icon"
-              className="rounded-full border-skyblue-300 text-skyblue-500 hover:bg-skyblue-50"
-            >
-              <ArrowRight className="h-5 w-5" />
-            </Button>
-          </div>
-
-          <div className="mt-8 md:mt-12">
-            <div className="text-3xl md:text-4xl font-bold text-skyblue-700">caerus</div>
-          </div>
+          <div className="text-center text-sm text-skyblue-600">© 2024 Caerus. All rights reserved.</div>
         </div>
       </footer>
     </div>

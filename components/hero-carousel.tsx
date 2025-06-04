@@ -1,65 +1,66 @@
-"use client"
+"use client";
 
-import { useEffect, useState, useCallback } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Play } from 'lucide-react'
+import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Play } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 
 const heroSlides = [
   {
     id: 1,
-    image: '/bow_lake_park.jpg',
-    title: 'Bow Lake, Canada',
-    description: 'Discover breathtaking destinations and unforgettable experiences',
+    image: "/bow_lake_park.jpg",
+    title: "Bow Lake, Canada",
+    description:
+      "Discover breathtaking destinations and unforgettable experiences",
   },
   {
     id: 2,
-    image: '/lake_louise_alberta.jpg',
-    title: 'Lake Louise Alberta, Canada',
-    description: 'Personalized itineraries tailored to your preferences',
+    image: "/lake_louise_alberta.jpg",
+    title: "Lake Louise Alberta, Canada",
+    description: "Personalized itineraries tailored to your preferences",
   },
   {
     id: 3,
-    image: '/pin_su_road.jpg',
-    title: 'Pin Su Road, Thailand',
+    image: "/pin_su_road.jpg",
+    title: "Pin Su Road, Thailand",
     description: "Off-the-beaten-path destinations you won't find elsewhere",
   },
-]
+];
 
 export default function HeroCarousel() {
-  const [api, setApi] = useState<any>(null)
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [api, setApi] = useState<any>(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const onSelect = useCallback(() => {
-    if (!api) return
-    setSelectedIndex(api.selectedScrollSnap())
-  }, [api])
+    if (!api) return;
+    setSelectedIndex(api.selectedScrollSnap());
+  }, [api]);
 
   useEffect(() => {
-    if (!api) return
+    if (!api) return;
 
     // Set up the onSelect event handler
-    api.on("select", onSelect)
+    api.on("select", onSelect);
 
     // Set up the auto-scroll interval
     const interval = setInterval(() => {
-      api.scrollNext()
-    }, 3000) // Auto-scroll every 3 seconds
+      api.scrollNext();
+    }, 3000); // Auto-scroll every 3 seconds
 
     // Clean up
     return () => {
-      clearInterval(interval)
-      api.off("select", onSelect)
-    }
-  }, [api, onSelect])
+      clearInterval(interval);
+      api.off("select", onSelect);
+    };
+  }, [api, onSelect]);
 
   return (
     <div className="relative">
@@ -93,11 +94,14 @@ export default function HeroCarousel() {
                     </Button>
                   </div>
                 </div>
-              </div>
-
-              <div className="absolute bottom-4 sm:bottom-8 md:bottom-12 right-4 sm:right-8 md:right-12 bg-white p-3 sm:p-4 rounded-lg shadow-lg max-w-[180px] sm:max-w-xs">
-                <h3 className="font-medium text-xs sm:text-sm mb-1">Explore our curated list of</h3>
-                <p className="font-medium text-xs sm:text-sm mb-0 sm:mb-2">must-visit destinations around the globe.</p>
+                <div className="absolute bottom-4 sm:bottom-8 md:bottom-12 right-4 sm:right-8 md:right-12 bg-white p-3 sm:p-4 rounded-lg shadow-lg max-w-[180px] sm:max-w-xs">
+                  <h3 className="font-medium text-xs sm:text-sm mb-1">
+                    Explore our curated list of
+                  </h3>
+                  <p className="font-medium text-xs sm:text-sm mb-0 sm:mb-2">
+                    {slide.description}
+                  </p>
+                </div>
               </div>
             </CarouselItem>
           ))}
@@ -113,25 +117,15 @@ export default function HeroCarousel() {
           <button
             key={index}
             className={`h-2 w-2 sm:h-3 sm:w-3 rounded-full transition-colors duration-300 ${
-              index === selectedIndex ? "bg-white" : "bg-white/40 hover:bg-white/60"
+              index === selectedIndex
+                ? "bg-white"
+                : "bg-white/40 hover:bg-white/60"
             }`}
             onClick={() => api?.scrollTo(index)}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
-
-      {/* <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-        <Badge variant="outline" className="bg-skyblue-500 text-white border-0 text-xs">
-          #PART1
-        </Badge>
-        <Badge variant="outline" className="bg-white/80 text-skyblue-800 border-0 text-xs">
-          #PRESENT1
-        </Badge>
-        <Badge variant="outline" className="bg-white/50 text-skyblue-800 border-0 text-xs hidden sm:inline-flex">
-          01
-        </Badge>
-      </div> */}
     </div>
-  )
+  );
 }
